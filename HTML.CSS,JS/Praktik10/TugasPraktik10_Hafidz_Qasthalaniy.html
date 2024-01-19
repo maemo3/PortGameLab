@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script language="javascript">
+        function masukannama()
+        {
+            if (document.f.iname.value =="")
+            {
+                alert("Anda belum memasukan Nama Barang");
+            }
+        }
+        function masukanbarang()
+        {
+            if (document.f.ibar.value =="")
+            {
+                alert("Anda belum memasukan Jumlah Barang");
+            }
+        }
+        function makasih()
+        {
+            if ((document.f.iname.value !="")&&(document.f.ibar.value !=""))
+            {
+                alert("Terima kasih sudah mengisi data");
+            } else
+            {
+                alert("Mohon lengkapi data yang diperlukan");
+            }
+        }
+    </script>
+    <h1 align="center">Form Barang Masuk</h1>
+    <hr width="600" color ="black" noshade size="10">
+    <center>
+        <form name="f" method="get">
+            <table>
+                <tr>
+                    <td> Nama Barang</td>
+                    <td>:</td>
+                    <td><input type="text" name="iname" onfocus="window.status='Silahkan Isi Nama Barang';" onblur="masukannama()"></td>
+                </tr>
+                <tr>
+                    <td> Jumlah Barang</td>
+                    <td>:</td>
+                    <td><input type="number" name="ibar" onfocus="window.status='Silahkan Isi JUmlah Barang';" onblur="masukanbarang()"></td>
+                </tr>
+            </table>
+            <p>
+                <input type="button" value="Kirim" onclick="makasih()">
+                <input type="reset" value="Reset">
+            </p>
+        </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1><u>FORMULIR PENDAFTARAN</u></h1>
+    <video width="320" height="240" >
+        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4" type="video/mp4">
+    </video>
+    <br>
+    <canvas id="myCanvas" width="300" height="150";">
+
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            // membuat gradient
+            var grd = ctx.createLinearGradient(0,0,250,0);
+            grd.addColorStop(0,"orange");
+            grd.addColorStop(1,"yellow");
+            // mengisi dengan gradient
+            ctx.fillStyle = grd;
+            ctx.fillRect(10, 10, 280, 180);
+            //membuat font
+            ctx.font = "30px Text New Roman";
+            ctx.strokeText("Educa Studio",70,90);
+        </script> 
+        </center>
+        <form>
+            <br>
+            <label for="nml">Nama Lengkap :</label>
+            <input type="text" id="nml" name="nml">
+            <br>
+            <label for="tpl">Tempat Lahir :</label>
+            <input type="text" id="tpl" name="tpl">
+            <br>
+            <label for="tgl">Tanggal Lahir :</label>
+            <input type="date" id="tgl" name="tgl">
+            <br>
+            <label for="jsk">Jenis Kelamin :</label>
+            <input type="radio" id="lk" name="gdr" value="lk">
+            <label for="lk">Laki-Laki</label>
+            <input type="radio" id="prm" name="gdr" value="prm">
+            <label for="prm">Perempuan</label>
+            <br>
+            <label for="alm">Alamat :</label>
+            <textarea name="area"></textarea>
+            <br>
+            <label for="em">Email :</label>
+            <input type="email" id="em" name="em">
+            <br>
+            <label for="hp">No. Hp :</label>
+            <input type="number" id="hp" name="hp">
+            <br>
+            <label for="kt">Kota :</label>
+            <select id="kt" name="kt">
+                <option value="pilih">*****Pilih Kota*****</option>
+                <option value="slt">Salatiga</option>
+                <option value="smg">Semarang</option>
+            </select>
+            <br>
+            <input type="submit" value="Simpan">
+            <input type="submit" value="Batal">
+        </form>
+</body>
+</html>

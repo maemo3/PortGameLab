@@ -1,0 +1,50 @@
+[{
+  "kode_anggota": "A001",
+  "nama_anggota": "Andi",
+  "alamat": "Salatiga"
+},
+{
+  "kode_anggota": "A002",
+  "nama_anggota": "Budi",
+  "alamat": "Salatiga"
+},
+{
+  "kode_anggota": "A003",
+  "nama_anggota": "Dedi",
+  "alamat": "Salatiga"
+},
+{
+  "kode_anggota": "A004",
+  "nama_anggota": "Edi",
+  "alamat": "Jakarta"
+},
+{
+  "kode_anggota": "A005",
+  "nama_anggota": "Fandi",
+  "alamat": "Jakarta"
+},
+{
+  "kode_anggota": "A006",
+  "nama_anggota": "Ferry",
+  "alamat": "Jakarta"
+},
+{
+  "kode_anggota": "A007",
+  "nama_anggota": "Gani",
+  "alamat": "Semarang"
+},
+{
+   "kode_anggota": "A008",
+  "nama_anggota": "Herry",
+  "alamat": "Semarang"
+},
+{
+  "kode_anggota": "A009",
+  "nama_anggota": "Iksan",
+  "alamat": "Semarang"
+},
+{
+  "kode_anggota": "A010",
+  "nama_anggota": "Jerry",
+  "alamat": "Semarang"
+}]

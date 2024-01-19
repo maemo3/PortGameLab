@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS Gamelab Indonesia</title>
+    <!-- Tambahkan link ke file CSS (jika ada) -->
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+</head>
+<body>
+    <h1 align="center">RS Gamelab Indonesia</h1>
+    <hr width="100%" color="black" noshade size="10">
+    <form>
+        <label for="idPasien">ID Pasien</label>
+        <br>
+        <input type="text" id="idPasien" />
+        <button type="button" onclick="searchData()">Search</button>
+        <br>
+
+        <label for="nama">Nama</label>
+        <br>
+        <input type="text" id="nama">
+        <br>
+
+        <label for="alamat">Alamat</label>
+        <br>
+        <input type="text" id="alamat">
+        <br>
+
+        <label for="penyakit">Penyakit</label>
+        <br>
+        <input type="text" id="penyakit">
+        <br>
+
+        <label for="nomerRuang">Nomer Ruang</label>
+        <br>
+        <input type="text" id="nomerRuang">
+        <br>
+
+        <label for="bpjs">BPJS</label>
+        <br>
+        <input type="text" id="bpjs">
+        <br>
+
+        <label for="tanggalMasuk">Tanggal Masuk</label>
+        <br>
+        <input type="date" id="tanggalMasuk">
+        <br>
+
+        <label for="tanggalKeluar">Tanggal Keluar</label>
+        <br>
+        <input type="date" id="tanggalKeluar">
+        <br>
+
+        <button type="button" onclick="saveData()">Save</button>
+        <button type="reset">Reset</button>
+        <button type="button" id="deleteButton" onclick="deleteData()" style="display:none;">Delete Data</button>
+    </form>
+    <hr width="100%" color="black" noshade size="10">
+    <table border="1" align="center">
+        <thead>
+            <tr>
+                <th>ID </th>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Penyakit</th>
+                <th>Nomer Ruang</th>
+                <th>BPJS</th>
+                <th>Tanggal Masuk</th>
+                <th>Tanggal Keluar</th>
+            </tr>
+        </thead>
+        <tbody id="displayData"></tbody>
+    </table>
+    <script>
+        function saveData() {
+            var idPasien = document.getElementById('idPasien').value;
+            var nama = document.getElementById('nama').value;
+            var alamat = document.getElementById('alamat').value;
+            var penyakit = document.getElementById('penyakit').value;
+            var nomerRuang = document.getElementById('nomerRuang').value;
+            var bpjs = document.getElementById('bpjs').value;
+            var tanggalMasuk = document.getElementById('tanggalMasuk').value;
+            var tanggalKeluar = document.getElementById('tanggalKeluar').value;
+
+            var newData = {
+                idPasien: idPasien,
+                nama: nama,
+                alamat: alamat,
+                penyakit: penyakit,
+                nomerRuang: nomerRuang,
+                bpjs: bpjs,
+                tanggalMasuk: tanggalMasuk,
+                tanggalKeluar: tanggalKeluar
+            };
+
+            var history = JSON.parse(localStorage.getItem('history')) || [];
+            history.push(newData);
+            localStorage.setItem('history', JSON.stringify(history));
+
+            displayStoredData();
+        }
+
+        function showData() {
+            displayStoredData();
+        }
+
+        function displayStoredData() {
+            var history = JSON.parse(localStorage.getItem('history'));
+            var displayDataElement = document.getElementById('displayData');
+
+            if (history && history.length > 0) {
+                displayDataElement.innerHTML = ""; // Kosongkan tabel sebelum menambahkan data
+
+                for (var i = 0; i < history.length; i++) {
+                    var row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${history[i].idPasien}</td>
+                        <td>${history[i].nama}</td>
+                        <td>${history[i].alamat}</td>
+                        <td>${history[i].penyakit}</td>
+                        <td>${history[i].nomerRuang}</td>
+                        <td>${history[i].bpjs}</td>
+                        <td>${history[i].tanggalMasuk}</td>
+                        <td>${history[i].tanggalKeluar}</td>
+                    `;
+                    displayDataElement.appendChild(row);
+                }
+            } else {
+                displayDataElement.innerHTML = "<tr><td colspan='8'>No data history.</td></tr>";
+            }
+        }
+
+        displayStoredData();
+
+        function searchData() {
+            alert("Fitur pencarian belum diimplementasikan.");
+        }
+
+        function searchData() {
+            var idToSearch = document.getElementById('idPasien').value;
+            var history = JSON.parse(localStorage.getItem('history'));
+
+            if (history && history.length > 0) {
+                var resultData = history.filter(function (data) {
+                    return data.idPasien === idToSearch;
+                });
+
+                if (resultData.length > 0) {
+                    displaySearchResult(resultData);
+                } else {
+                    alert("Data not found for ID: " + idToSearch);
+                }
+            } else {
+                alert("No data history available.");
+            }
+        }
+
+        function searchData() {
+            var idToSearch = document.getElementById('idPasien').value;
+            var history = JSON.parse(localStorage.getItem('history'));
+
+            if (history && history.length > 0) {
+                var resultData = history.filter(function (data) {
+                    return data.idPasien === idToSearch;
+                });
+
+                if (resultData.length > 0) {
+                    displaySearchResult(resultData);
+                    showDeleteButton();
+                } else {
+                    alert("Data not found for ID: " + idToSearch);
+                    hideDeleteButton();
+                }
+            } else {
+                alert("No data history available.");
+                hideDeleteButton();
+            }
+        }
+
+        function displaySearchResult(resultData) {
+            var displayDataElement = document.getElementById('displayData');
+            displayDataElement.innerHTML = "";
+
+            for (var i = 0; i < resultData.length; i++) {
+                var row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${resultData[i].idPasien}</td>
+                    <td>${resultData[i].nama}</td>
+                    <td>${resultData[i].alamat}</td>
+                    <td>${resultData[i].penyakit}</td>
+                    <td>${resultData[i].nomerRuang}</td>
+                    <td>${resultData[i].bpjs}</td>
+                    <td>${resultData[i].tanggalMasuk}</td>
+                    <td>${resultData[i].tanggalKeluar}</td>
+                `;
+                displayDataElement.appendChild(row);
+
+                // Set nilai input kembali ke data yang ditemukan
+                document.getElementById('nama').value = resultData[i].nama;
+                document.getElementById('alamat').value = resultData[i].alamat;
+                document.getElementById('penyakit').value = resultData[i].penyakit;
+                document.getElementById('nomerRuang').value = resultData[i].nomerRuang;
+                document.getElementById('bpjs').value = resultData[i].bpjs;
+                document.getElementById('tanggalMasuk').value = resultData[i].tanggalMasuk;
+                document.getElementById('tanggalKeluar').value = resultData[i].tanggalKeluar;
+            }
+        }
+
+        function showDeleteButton() {
+            document.getElementById('deleteButton').style.display = 'block';
+        }
+
+        function hideDeleteButton() {
+            document.getElementById('deleteButton').style.display = 'none';
+        }
+
+        function editData() {
+            var idToEdit = document.getElementById('idPasien').value;
+            var history = JSON.parse(localStorage.getItem('history'));
+
+            if (history && history.length > 0) {
+                // Temukan data dengan ID yang sama dan perbarui nilainya
+                for (var i = 0; i < history.length; i++) {
+                    if (history[i].idPasien === idToEdit) {
+                        history[i].nama = document.getElementById('nama').value;
+                        history[i].alamat = document.getElementById('alamat').value;
+                        history[i].penyakit = document.getElementById('penyakit').value;
+                        history[i].nomerRuang = document.getElementById('nomerRuang').value;
+                        history[i].bpjs = document.getElementById('bpjs').value;
+                        history[i].tanggalMasuk = document.getElementById('tanggalMasuk').value;
+                        history[i].tanggalKeluar = document.getElementById('tanggalKeluar').value;
+                        break; // Keluar dari loop setelah menemukan dan memperbarui data
+                    }
+                }
+
+                // Simpan kembali data yang sudah diperbarui ke localStorage
+                localStorage.setItem('history', JSON.stringify(history));
+
+                // Tampilkan kembali data yang sudah diperbarui
+                displayStoredData();
+            } else {
+                alert("No data history available.");
+            }
+        }
+        
+    </script>
+</body>
+</html>

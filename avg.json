@@ -1,0 +1,3 @@
+{ "_id": 1, "kuis": [ 10, 6, 7 ], "labs": [ 5, 8 ], "final": 80, "tengah semester": 75 }
+ { "_id": 2, "kuis": [ 9, 10 ], "labs": [ 8, 8 ], "final": 95, "tengah semester": 80 }
+ { "_id": 3, "kuis": [ 4, 5, 5 ], "labs": [ 6, 5 ], "final": 78, "tengah semester": 70 }

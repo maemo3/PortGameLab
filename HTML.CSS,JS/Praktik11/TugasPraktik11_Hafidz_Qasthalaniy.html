@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Example</title>
+</head>
+<body>
+    <h1 align="center">Penyimpanan Barang</h1>
+    <hr width="600" color ="black" noshade size="10">
+    <center>
+    <label for="dataInput"><h3>Masukan Data</h3></label>
+    <input type="text" id="dataInput" style="margin: 0 0 10px 0;">
+    <br>
+    <button onclick="saveData()">Simpan Data</button>
+    <button onclick="resetData()">Reset Data</button>
+
+    <hr width="600" color ="black" noshade size="10">
+    <p id="displayData"></p>
+    </center>
+    <script>
+        function saveData() {
+            var inputData = document.getElementById('dataInput').value;
+
+            if (inputData.trim() !== "") {
+                var history = JSON.parse(localStorage.getItem('history')) || [];
+                history.push(inputData);
+                localStorage.setItem('history', JSON.stringify(history));
+                displayStoredData();
+            } else {
+                alert("Masukan Data yang benar");
+            }
+        }
+
+        function resetData() {
+            localStorage.removeItem('history');
+            displayStoredData();
+        }
+
+        function displayStoredData() {
+            var history = JSON.parse(localStorage.getItem('history'));
+
+            if (history && history.length > 0) {
+                var displayText = "Data History:<br>";
+                for (var i = 0; i < history.length; i++) {
+                    displayText += (i + 1) + ". " + history[i] + "<br>";
+                }
+                document.getElementById('displayData').innerHTML = displayText;
+            } else {
+                document.getElementById('displayData').innerText = "No data history.";
+            }
+        }
+
+        displayStoredData();
+    </script>
+</body>
+</html>

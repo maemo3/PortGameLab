@@ -1,0 +1,70 @@
+[{
+  "kode_buku": "ED001",
+  "nama_rak": "Buku Digital",
+  "lokasi_rak": "Edukasi Anak"
+},
+{
+  "kode_buku": "ED002",
+  "nama_rak": "Buku Digital",
+  "lokasi_rak": "Edukasi Anak"
+},
+{
+  "kode_buku": "ED003",
+  "nama_rak": "Buku Digital",
+  "lokasi_rak": "Edukasi Anak"
+},
+{
+  "kode_buku": "ED004",
+  "nama_rak": "Buku Cerita",
+  "lokasi_rak": "Edukasi Anak"
+},
+{
+  "kode_buku": "ED005",
+  "nama_rak": "Buku Cerita",
+  "lokasi_rak": "Edukasi Anak"
+},
+{
+  "kode_buku": "HCJ01",
+  "nama_rak": "Web Programming",
+  "lokasi_rak": "Teknologi"
+},
+{
+  "kode_buku": "NM001",
+  "nama_rak": "Database",
+  "lokasi_rak": "Teknologi"
+},
+{
+   "kode_buku": "NM002",
+  "nama_rak": "Database",
+  "lokasi_rak": "Teknologi"
+},
+{
+  "kode_buku": "P001",
+  "nama_rak": "Web Programming",
+  "lokasi_rak": "Teknologi"
+},
+{
+  "kode_buku": "JS001",
+  "nama_rak": "Web Programming",
+  "lokasi_rak": "Teknologi"
+},
+{
+  "kode_buku": "C001",
+  "nama_rak": "Game Programming",
+  "lokasi_rak": "Teknologi"
+},
+{
+  "kode_buku": "C002",
+  "nama_rak": "Game Programming",
+  "lokasi_rak": "Teknologi"
+},
+{
+  "kode_buku": "C003",
+  "nama_rak": "Game Programming",
+  "lokasi_rak": "Teknologi"
+},
+{
+  "kode_buku": "V001",
+  "nama_rak": "Web Programming",
+  "lokasi_rak": "Teknologi"
+}]

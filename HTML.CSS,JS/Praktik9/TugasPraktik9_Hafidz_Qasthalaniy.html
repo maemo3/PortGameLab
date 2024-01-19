@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="nama">Hafidz Qasthalaniy</h1>
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum fugiat laboriosam ea quos totam voluptatem ipsum, nihil dignissimos, autem mollitia eligendi at doloremque? Eaque cupiditate quam necessitatibus obcaecati ullam provident?</p>
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, molestiae iure enim at fugiat ea molestias maiores inventore dolorum minus laboriosam placeat vel qui obcaecati distinctio aperiam nam atque asperiores.</p>
+    <p class="paragraf">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam cumque non sequi. Similique aperiam odit ducimus ea, dolor perspiciatis ipsum ad deserunt rerum alias ipsam eligendi, tempore est voluptatum reiciendis.</p>
+</body>
+<script>
+
+    var paragraf = document.getElementsByClassName("paragraf");
+    setInterval(function () {
+        paragraf[0].style.color = "blue";
+        paragraf[1].style.color = "red";
+        paragraf[2].style.color = "green";
+
+        setTimeout(function () {
+        paragraf[0].style.color = "black";
+        paragraf[1].style.color = "black";
+        paragraf[2].style.color = "black";
+    }, 500)
+    }, 1000);
+
+</script>
+</html>

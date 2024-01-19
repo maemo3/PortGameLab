@@ -1,0 +1,28 @@
+[{
+   "kode_buku": "V001",
+   "judul_buku": "Kerangka Javascript Vue",
+   "pengarang": "Gamelab Indonesia",
+   "jml_halaman": 500,
+   "thn_terbit": 2020
+ },
+ {
+   "kode_buku": "G001",
+   "judul_buku": "Pemrograman dasar Golang",
+   "pengarang": "Gamelab Indonesia",
+   "jml_halaman": 700,
+   "thn_terbit": 2021
+ },
+ {
+   "kode_buku": "DB004",
+   "judul_buku": "Persahabatan Angsa",
+   "pengarang": "Studio Pendidikan",
+   "jml_halaman": 700,
+   "thn_terbit": 2021
+ },
+ {
+   "kode_buku": "ED005",
+   "judul_buku": "Lampu Hias Kreatifku",
+   "pengarang": "Studio Pendidikan",
+   "jml_halaman": 700,
+   "thn_terbit": 2020
+ }]

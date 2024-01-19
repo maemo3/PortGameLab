@@ -1,0 +1,60 @@
+[{
+  "kode_anggota": "A001",
+  "kode_buku": "HCJ01",
+  "tgl_pinjam": "2022-12-29T00:00:00Z",
+  "tgl_kembali": "2022-12-31T00:00:00Z"
+},
+{
+  "kode_anggota": "A002",
+  "kode_buku": "NM001",
+  "tgl_pinjam": "2022-12-24T00:00:00Z",
+  "tgl_kembali": "2022-12-31T00:00:00Z"
+},
+{
+  "kode_anggota": "A003",
+  "kode_buku": "NM002",
+  "tgl_pinjam": "2022-12-25T00:00:00Z",
+  "tgl_kembali": "2022-12-31T00:00:00Z"
+},
+{
+  "kode_anggota": "A004",
+  "kode_buku": "P001",
+  "tgl_pinjam": "2022-12-27T00:00:00Z",
+  "tgl_kembali": "2022-12-31T00:00:00Z"
+},
+{
+  "kode_anggota": "A005",
+  "kode_buku": "JS001",
+  "tgl_pinjam": "2022-12-28T00:00:00Z",
+  "tgl_kembali": "2022-12-31T00:00:00Z"
+},
+{
+  "kode_anggota": "A006",
+  "kode_buku": "C001",
+  "tgl_pinjam": "2022-12-30T00:00:00Z",
+  "tgl_kembali": "2022-12-31T00:00:00Z"
+},
+{
+  "kode_anggota": "A007",
+  "kode_buku": "C002",
+  "tgl_pinjam": "2022-12-27T00:00:00Z",
+  "tgl_kembali": "2022-12-31T00:00:00Z"
+},
+{
+  "kode_anggota": "A008",
+  "kode_buku": "C003",
+  "tgl_pinjam": "2022-12-28T00:00:00Z",
+  "tgl_kembali": "2022-12-31T00:00:00Z"
+},
+{
+  "kode_anggota": "A009",
+  "kode_buku": "NM002",
+  "tgl_pinjam": "2022-12-25T00:00:00Z",
+  "tgl_kembali": "2022-12-31T00:00:00Z"
+},
+{
+  "kode_anggota": "A010",
+  "kode_buku": "NM002",
+  "tgl_pinjam": "2022-12-26T00:00:00Z",
+  "tgl_kembali": "2022-12-31T00:00:00Z"
+}]

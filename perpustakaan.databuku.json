@@ -1,0 +1,140 @@
+[{
+  "_id": {
+    "$oid": "65a7735175ff0a03e0d50e5f"
+  },
+  "kode_buku": "NM001",
+  "judul_buku": "NodeJS dan MySQL",
+  "pengarang": "Gamelab Indonesia",
+  "jml_halaman": 700,
+  "thn_terbit": 2023
+},
+{
+  "_id": {
+    "$oid": "65a7735175ff0a03e0d50e60"
+  },
+  "kode_buku": "NM002",
+  "judul_buku": "NodeJS dan MongoDB",
+  "pengarang": "Gamelab Indonesia",
+  "jml_halaman": 700,
+  "thn_terbit": 2023
+},
+{
+  "_id": {
+    "$oid": "65a774d55fa25c0e8fcff529"
+  },
+  "kode_buku": "C001",
+  "judul_buku": "Pemrograman dasar C++",
+  "pengarang": "Gamelab Indonesia",
+  "jml_halaman": 700,
+  "thn_terbit": 2023
+},
+{
+  "_id": {
+    "$oid": "65a774d55fa25c0e8fcff52a"
+  },
+  "kode_buku": "C002",
+  "judul_buku": "Pemrograman dasar C#",
+  "pengarang": "Gamelab Indonesia",
+  "jml_halaman": 700,
+  "thn_terbit": 2023
+},
+{
+  "_id": {
+    "$oid": "65a775695fa25c0e8fcff52b"
+  },
+  "kode_buku": "C001",
+  "judul_buku": "Pemrograman dasar C++",
+  "pengarang": "Gamelab Indonesia",
+  "jml_halaman": 700,
+  "thn_terbit": 2023
+},
+{
+  "_id": {
+    "$oid": "65a775695fa25c0e8fcff52c"
+  },
+  "kode_buku": "C002",
+  "judul_buku": "Pemrograman dasar C#",
+  "pengarang": "Gamelab Indonesia",
+  "jml_halaman": 700,
+  "thn_terbit": 2023
+},
+{
+  "_id": {
+    "$oid": "65a77d5475ff0a03e0d50e62"
+  },
+  "kode_buku": "P002",
+  "judul_buku": "PHP, MySQL, dan MongoDB",
+  "pengarang": "Gamelab Indonesia",
+  "jml_halaman": 700,
+  "thn_terbit": 2023
+},
+{
+  "_id": {
+    "$oid": "65a78cb575ff0a03e0d50e66"
+  },
+  "kode_buku": "DB001",
+  "judul_buku": "Bawang Merah dan Bawang Putih",
+  "pengarang": "Educa Studio",
+  "jml_halaman": 700,
+  "thn_terbit": 2022
+},
+{
+  "_id": {
+    "$oid": "65a78cb575ff0a03e0d50e67"
+  },
+  "kode_buku": "DB002",
+  "judul_buku": "Kelinci dan Kura-Kura",
+  "pengarang": "Educa Studio",
+  "jml_halaman": 700,
+  "thn_terbit": 2022
+},
+{
+  "_id": {
+    "$oid": "65a78cb575ff0a03e0d50e68"
+  },
+  "kode_buku": "DB003",
+  "judul_buku": "Kancil dan Buaya",
+  "pengarang": "Educa Studio",
+  "jml_halaman": 700,
+  "thn_terbit": 2022
+},
+{
+  "_id": {
+    "$oid": "65a7902b5fa25c0e8fcff537"
+  },
+  "kode_buku": "V001",
+  "judul_buku": "Kerangka Javascript Vue",
+  "pengarang": "Gamelab Indonesia",
+  "jml_halaman": 500,
+  "thn_terbit": 2020
+},
+{
+  "_id": {
+    "$oid": "65a7902b5fa25c0e8fcff538"
+  },
+  "kode_buku": "G001",
+  "judul_buku": "Pemrograman dasar Golang",
+  "pengarang": "Gamelab Indonesia",
+  "jml_halaman": 700,
+  "thn_terbit": 2021
+},
+{
+  "_id": {
+    "$oid": "65a7902b5fa25c0e8fcff539"
+  },
+  "kode_buku": "DB004",
+  "judul_buku": "Persahabatan Angsa",
+  "pengarang": "Studio Pendidikan",
+  "jml_halaman": 700,
+  "thn_terbit": 2021
+},
+{
+  "_id": {
+    "$oid": "65a7902b5fa25c0e8fcff53a"
+  },
+  "kode_buku": "ED005",
+  "judul_buku": "Lampu Hias Kreatifku",
+  "pengarang": "Studio Pendidikan",
+  "jml_halaman": 700,
+  "thn_terbit": 2020
+}]
