@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const loginController = require('../controller').login;
-const verifyUser= require('../library/verify');
+const verifyUser = require('../library/verify');
 
 router.get('/', verifyUser.isLogout, loginController.login);
 router.get('/logout', loginController.logout);

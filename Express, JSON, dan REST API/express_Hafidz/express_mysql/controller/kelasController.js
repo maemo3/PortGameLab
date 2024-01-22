@@ -1,11 +1,11 @@
-var connection = require("../library/database");
+var connection = require('../library/database');
 
 const getAllkelas = function (req, res) {
-  connection.query("SELECT * FROM kelas", function (err, rows) {
+  connection.query('SELECT * FROM kelas', function (err, rows) {
     if (err) {
-      res.send("error", err);
+      res.send('error', err);
       res.json({
-        data: "",
+        data: '',
       });
     } else {
       res.json({
@@ -18,12 +18,12 @@ const getAllkelas = function (req, res) {
 const getKelasId = function (req, res) {
   let id = req.params.id;
   connection.query(
-    "SELECT * FROM kelas WHERE id=" + id,
+    'SELECT * FROM kelas WHERE id=' + id,
     function (err, rows) {
       if (err) {
-        res.send("error", err);
+        res.send('error', err);
         res.json({
-          data: "",
+          data: '',
         });
       } else {
         res.json({
@@ -42,13 +42,13 @@ const createKelas = function (req, res) {
   if (!nama_jurusan) {
     errors = true;
     res.json({
-      pesan: "Field nama_jurusan belum diisi, Field harus diisi dengan lengkap",
+      pesan: 'Field nama_jurusan belum diisi, Field harus diisi dengan lengkap',
     });
   }
   if (!Deskripsi) {
     errors = true;
     res.json({
-      pesan: "Field Deskripsi belum diisi, Field harus diisi dengan lengkap",
+      pesan: 'Field Deskripsi belum diisi, Field harus diisi dengan lengkap',
     });
   }
 
@@ -59,13 +59,13 @@ const createKelas = function (req, res) {
     };
 
     connection.query(
-      "INSERT INTO kelas SET ?",
+      'INSERT INTO kelas SET ?',
       formData,
       function (err, result) {
         if (err) {
-          res.json({ pesan: "Data gagal disimpan" });
+          res.json({ pesan: 'Data gagal disimpan' });
         } else {
-          res.send("Data berhasil disimpan");
+          res.send('Data berhasil disimpan');
         }
       }
     );
@@ -81,13 +81,13 @@ const updateKelas = function (req, res) {
   if (!nama_jurusan) {
     errors = true;
     res.json({
-      pesan: "Field nama_jurusan tidak boleh kosong",
+      pesan: 'Field nama_jurusan tidak boleh kosong',
     });
   }
   if (!Deskripsi) {
     errors = true;
     res.json({
-      pesan: "Field Deskripsi tidak boleh kosong",
+      pesan: 'Field Deskripsi tidak boleh kosong',
     });
   }
 
@@ -98,18 +98,18 @@ const updateKelas = function (req, res) {
     };
 
     connection.query(
-      "UPDATE kelas SET ? WHERE id = " + id,
+      'UPDATE kelas SET ? WHERE id = ' + id,
       formData,
       function (err, result) {
         if (err) {
-          res.send("error", err);
+          res.send('error', err);
           res.json({
             id: req.params.id,
             nama_jurusan: formData.nama_jurusan,
             Deskripsi: formData.Deskripsi,
           });
         } else {
-          res.send("Data berhasil Diupdate!");
+          res.send('Data berhasil Diupdate!');
         }
       }
     );

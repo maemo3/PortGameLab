@@ -5,8 +5,8 @@ module.exports = {
       return;
     } else {
       req.session.destroy(function (err) {
-        res.redirect("/login");
-      });
+        res.redirect('/login');
+      })
     }
   },
   isLogout(req, res, next) {
@@ -14,6 +14,6 @@ module.exports = {
       next();
       return;
     }
-    res.redirect("/");
-  },
+    res.redirect('/');
+  }
 };
