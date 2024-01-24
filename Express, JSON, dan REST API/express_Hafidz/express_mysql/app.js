@@ -13,6 +13,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var kelasRouter = require('./routes/kelas');
+var productRouter = require('./routes/product');
 
 //Auth
 const loginRoutes = require('./routes/login');
@@ -60,6 +61,7 @@ app.use('/session', sessionRouter);
 //routes auth
 app.use('/login', loginRoutes);
 app.use('/register', registerRoutes);
+app.use('/product', productRouter);
 
 // // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
