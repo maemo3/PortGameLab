@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.2",
-    "express-session": "^1.17.3"
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
     "connect-livereload": "^0.6.1",

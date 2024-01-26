@@ -8,23 +8,14 @@ var bodyParser = require("body-parser");
 var flash = require("req-flash");
 
 var sessionRouter = require("./routes/session");
-
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-
-var kelasRouter = require("./routes/kelas");
-var productRouter = require("./routes/product");
-
+var indexRouter = require('./routes/index');
 //Auth
 const loginRoutes = require("./routes/login");
 const registerRoutes = require("./routes/register");
 
 var app = express();
 
-// // view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
-
+//Pasang paling atas
 app.use(
   session({
     secret: "iniadalahkeyrahasiamu",
@@ -39,9 +30,6 @@ app.use(
 app.use((req, res, next) => {
   const date = new Date();
 
-  // Function to convert
-  // single digit input
-  // to two digits
   const formatData = (input) => {
     if (input > 9) {
       return input;
@@ -49,8 +37,8 @@ app.use((req, res, next) => {
   };
 
   console.log(
-    "Waktu Akses: ", formatData(date.getHours()),":", 
-    formatData(date.getMinutes()),":",
+    "Waktu Akses: ", formatData(date.getHours()) +":"+
+    formatData(date.getMinutes())+":"+
     formatData(date.getSeconds())
   );
   next();
@@ -58,7 +46,6 @@ app.use((req, res, next) => {
 
 app.use(logger("dev"));
 app.use(bodyParser.json());
-// app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(flash());
@@ -75,33 +62,14 @@ app.use(function (req, res, next) {
 // end
 
 app.use(express.static(path.join(__dirname, "public")));
+
 //folder views
 app.set("views", path.join(__dirname, "./views"));
 app.set("view engine", "ejs");
 
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
-app.use("/kelas", kelasRouter);
-app.use("/session", sessionRouter);
 //routes auth
 app.use("/login", loginRoutes);
 app.use("/register", registerRoutes);
-app.use("/product", productRouter);
-
-// // catch 404 and forward to error handler
-// app.use(function(req, res, next) {
-//   next(createError(404));
-// });
-
-// // error handler
-// app.use(function(err, req, res, next) {
-//   // set locals, only providing error in development
-//   res.locals.message = err.message;
-//   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-//   // render the error page
-//   res.status(err.status || 500);
-//   res.render('error');
-// });
+app.use('/', indexRouter);
 
 module.exports = app;
