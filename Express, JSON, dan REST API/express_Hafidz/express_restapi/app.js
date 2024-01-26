@@ -296,7 +296,8 @@ app.use((err, req, res, next) => {
 //   res.send(result);
 // });
 
-app.listen(300, () => console.log("Server running on port 3000"));
+
+app.listen(3000, () => console.log("Server running on port 3000"));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
