@@ -67,6 +67,7 @@ app.use("/register", registerRoutes);
 app.use('/', indexRouter);
 app.use('/check', userRouter);
 app.use('/produk', productsRouter);
-app.use ('/api', JWTRouter, kelasRouter);
+app.use('/api', JWTRouter);
+app.use('/data', kelasRouter);
 
 module.exports = app;
