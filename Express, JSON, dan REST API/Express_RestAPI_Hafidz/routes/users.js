@@ -3,37 +3,6 @@ var router = express.Router();
 const bodyParser = require('body-parser')
 
 router.use(bodyParser.json())
-router.get('/', function (req, res) {
-  console.log(req.method)
-  res.send('Halo Gamelab')
-});
-router.post('/', function (req, res) {
-  console.log(req.body)
-  res.send('Data sudah terkirim')
-});
-router.get('/kueri', function (req, res) {
-  var nama = req.query.nama;
-  var usia = req.query.usia;
-  console.log(nama, usia)
-  res.json({
-    nama,
-    usia
-  })
-});
-router.post('/users/:id', function (req, res) {
-  var id = req.params.id;
-  var path = req.path;
-  console.log(id, path)
-  res.json({
-    id,
-    path
-  })
-});
-router.get('/header', function(req, res) {
-  var userAgent = req.headers['user-agent'];
-  console.log(userAgent)
-  res.send(userAgent)
-});
 
 const users = {
   gamelab: {

@@ -38,7 +38,7 @@ const products = {
     ]
 }
 
-router.get('/', (req, res) => {
+router.get('/produk', (req, res) => {
     res.json({
         data: products
     });

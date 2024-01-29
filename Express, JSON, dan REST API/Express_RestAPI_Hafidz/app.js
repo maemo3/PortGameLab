@@ -13,6 +13,7 @@ var userRouter = require('./routes/users');
 var productsRouter = require('./routes/product');
 var JWTRouter = require('./routes/jwt');
 var kelasRouter = require('./routes/kelas');
+var kueriRouter = require('./routes/kueri');
 
 //Auth
 const loginRoutes = require("./routes/login");
@@ -66,8 +67,8 @@ app.use("/login", loginRoutes);
 app.use("/register", registerRoutes);
 app.use('/', indexRouter);
 app.use('/check', userRouter);
-app.use('/produk', productsRouter);
 app.use('/api', JWTRouter);
-app.use('/data', kelasRouter);
+app.use('/data', productsRouter, kelasRouter);
+app.use('/test', kueriRouter);
 
 module.exports = app;
